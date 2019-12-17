@@ -20,7 +20,7 @@ def add_inference_args(parser):
     parser.add_argument('--cuda', action="store_true", help='Use cuda')
     parser.add_argument('--half', action="store_true",
                         help='Use half precision. This is recommended when using mixed-precision at training time')
-    parser.add_argument('--decoder', default="greedy", choices=["greedy", "beam"], type=str, help="Decoder to use")
+    parser.add_argument('--decoder', default="greedy", choices=["greedy", "beam_w","beam_c"], type=str, help="Decoder to use")
     parser.add_argument('--model-path', default='models/deepspeech_final.pth',
                         help='Path to model file created by training')
     return parser
