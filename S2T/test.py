@@ -67,10 +67,8 @@ if __name__ == '__main__':
 		num_tokens += len(reference.split())
 		num_chars += len(reference)
 
-	wer = float(total_wer) / num_tokens
-	cer = float(total_cer) / num_chars
-	print("wer: ", wer)
-	print("cer: ", cer)
+	wer = (float(total_wer) / num_tokens)*100
+	cer = (float(total_cer) / num_chars)*100
 	print('Test Summary \t'
 		'Average WER {wer:.3f}\t'
 		'Average CER {cer:.3f}\t'.format(wer=wer, cer=cer))
