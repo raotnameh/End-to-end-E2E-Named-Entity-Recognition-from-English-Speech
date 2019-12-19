@@ -69,6 +69,8 @@ if __name__ == '__main__':
 
 	wer = float(total_wer) / num_tokens
 	cer = float(total_cer) / num_chars
+	print("wer: ", wer)
+	print("cer: ", cer)
 	print('Test Summary \t'
 		'Average WER {wer:.3f}\t'
 		'Average CER {cer:.3f}\t'.format(wer=wer, cer=cer))
