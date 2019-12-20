@@ -65,7 +65,7 @@ if __name__ == '__main__':
 		total_wer += wer_inst
 		total_cer += cer_inst
 		num_tokens += len(reference.split())
-		num_chars += len(reference)
+		num_chars += len(reference.replace(' ', ''))
 
 	wer = (float(total_wer) / num_tokens)*100
 	cer = (float(total_cer) / num_chars)*100
