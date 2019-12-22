@@ -119,7 +119,7 @@ def ctc_beam_search(out,labels, prune=0.0001, k=20, lm=None,alpha=0.3,beta=12):
                     #expanding the beam (extend case as the last character is different)
                     elif c_t == " " and len(b.replace(' ', '')) > 0 : # LM constraints
                         prob = [i[0] for i in lm.full_scores(i_plus,eos=False,bos=False)][-1]
-                        lm_p = prob #(10**prob)**alpha
+                        lm_p = (10**prob)**alpha
                         pnb[t][i_plus] += lm_p*out[t][index]*(pb[t-1][b] + pnb[t-1][b])
                     else:
                         pnb[t][i_plus] += out[t][index]*(pb[t-1][b] + pnb[t-1][b])
@@ -176,7 +176,7 @@ def ctc_beam_search_clm(out,labels, prune=0.001, k=20, lm=None,alpha=0.3,beta=12
                     #expanding the beam (extend case as the last character is different)
                     elif len(b.replace(' ', '')) > 0 :
                         prob = [i[0] for i in lm.full_scores(i_plus,eos=False,bos=False)][-1]
-                        lm_p = (10**prob)**alpha
+                        lm_p = 1#(10**prob)**alpha
                         pnb[t][i_plus] += lm_p*out[t][index]*(pb[t-1][b] + pnb[t-1][b])
                     else:
                         pnb[t][i_plus] += out[t][index]*(pb[t-1][b] + pnb[t-1][b])

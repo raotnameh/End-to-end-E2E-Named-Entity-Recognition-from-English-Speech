@@ -31,10 +31,8 @@ def check_loss(loss, loss_value):
     return loss_valid, error
 
 
-def load_model(device, model_path, use_half):
+def load_model(device, model_path):
     model = DeepSpeech.load_model(model_path)
     model.eval()
     model = model.to(device)
-    if use_half:
-        model = model.half()
     return model
