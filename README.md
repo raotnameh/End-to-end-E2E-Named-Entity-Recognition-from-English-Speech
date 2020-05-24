@@ -1,13 +1,7 @@
 *Tested on Ubuntu 18.04.* <br/>
 <sub>**Work in process.<br />**</sub>
 
-
 ## End-to-end Named Entity Recognition (E2E NER) from English Speech
-
-
-please refer to SeanNaren Deepspecch.pytorch repo for  speech2text (S2T). <br />
-link: 
-
 
 *<sub>The [E2E NER from speech]() implementation used in this project is heavily based on the **[SeanNaren's](https://github.com/SeanNaren/deepspeech.pytorch)** Deepspeech2 (DS2) pytorch implementation and [FlairNLP](https://github.com/flairNLP/flair). I strongly recommend to look at these 2 repos</sub>*
 
@@ -17,7 +11,7 @@ Named entity recognition (NER) from text has been a widely studied problem and u
 ## Problem statement:
 In this work, we present an E2E NER approach from Enlgish speech, which jointly optimizes the ASR and NER tagger components. Experimental results show that the proposed E2E approach outperforms  the  classical  two-step  approach. 
 
-## Purpose of this work:
+## Overview:
 * NER is an important task in information extraction systems and very useful in many applications. It has many [progress](https://nlp.cs.nyu.edu/sekine/papers/li07.pdf) and applications such as in optimizing search engine algorithms~, classifying content for news providers, and recommending content. However, NER from speech has many applications such as the privacy concerns in medical recordings (to mute or hide specific words such as patient names), but not a lot of work has been done in this regard.
 
 ## Dataset: 
@@ -28,9 +22,10 @@ In this work, we present an E2E NER approach from Enlgish speech, which jointly 
 parameters/hyper-parameters and anchor box tuning.
 
 ### Experimental results: <br/>
-|System|Category|Precision|Recall|F1|
-|Two-step|Micro average|0.83|0.77|0.80|
-|E2E NER|Micro average|**0.96**|**0.85**|**0.90**|
+| System   | Category     | Precision | Recall | F1     |
+| -------- | ------------ | --------- | ------ | ------ |
+| Two-step |Micro average | 0.83      |0.77    |0.80    |
+| E2E NER  |Micro average | **0.96**  |**0.85**|**0.90**|
 
 ### Dataset preparation steps:
 * The dataset for this task is prepared in two steps:
