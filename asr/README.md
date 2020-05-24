@@ -95,12 +95,10 @@ A beam search decoder can optionally be used with the installation of the `ctcde
 - **alpha** weight for language model
 - **beta** bonus weight for words
 ## Pre-trained models
-
-Pre-trained models can be found under releases [here](https://github.com/SeanNaren/deepspeech.pytorch/releases).
-
+Soon
 
 
-### Experimental results: <br/>
+## Experimental results: <br/>
 | System   | Category     | Precision | Recall | F1     |
 | -------- | ------------ | --------- | ------ | ------ |
 | Two-step |Micro average | 0.83      |0.77    |0.80    |
