@@ -13,6 +13,7 @@ In this work, we present an E2E NER approach from Enlgish speech, which jointly 
 * NER is an important task in information extraction systems and very useful in many applications. It has many [progress](https://nlp.cs.nyu.edu/sekine/papers/li07.pdf) and applications such as in optimizing search engine algorithms~, classifying content for news providers, and recommending content. However, NER from speech has many applications such as the privacy concerns in medical recordings (to mute or hide specific words such as patient names), but not a lot of work has been done in this regard.
 
 ### Dataset: 
+We will release it soon.
 
 ### What we deliver in this repo:
 * **Source code files**: For bth the ASR and NER tagger component as standlaone and for the E2E NER.
