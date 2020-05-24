@@ -9,7 +9,8 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
-asr/data/ner/
+asr/data/ner/4_gram.arpa
+asr/data/ner/full_data/
 develop-eggs/
 dist/
 downloads/
