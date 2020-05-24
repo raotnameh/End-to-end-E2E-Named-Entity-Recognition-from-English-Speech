@@ -1,4 +1,5 @@
- <sub>**Work in progress.<br />**</sub> <br/>
+<sub>This is theimplentation of the E2E NER paper. <sub/>
+<sub>**Work in progress.<br />**</sub> <br/>
 *Tested on Ubuntu 18.04.* <br/>
 *<sub>The [E2E NER from speech]() implementation used in this project is heavily based on the **[SeanNaren's](https://github.com/SeanNaren/deepspeech.pytorch)** Deepspeech2 (DS2) pytorch implementation and [FlairNLP](https://github.com/flairNLP/flair). I strongly recommend to look at these 2 repos.</sub>*
 
