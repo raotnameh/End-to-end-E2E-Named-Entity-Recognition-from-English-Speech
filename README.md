@@ -4,15 +4,15 @@
 
 
 #### Overview: 
-<span style="font-family:Papyrus; font-size:4em;">Named entity recognition (NER) from text has been a widely studied problem and usually extracts semantic information from text. Until now, NER from speech is mostly studied in a two-step pipeline process that includes first applying an automaticspeech recognition (ASR) system on an audio sample and then passing the predicted transcript to a NER tagger. In such cases,the error does not propagate from one step to another as boththe tasks are not optimized in an end-to-end (E2E) fashion. Recent studies confirm that integrated approaches (e.g., E2E ASR)outperform sequential ones (e.g., phoneme based ASR). </span>
+Named entity recognition (NER) from text has been a widely studied problem and usually extracts semantic information from text. Until now, NER from speech is mostly studied in a two-step pipeline process that includes first applying an automaticspeech recognition (ASR) system on an audio sample and then passing the predicted transcript to a NER tagger. In such cases,the error does not propagate from one step to another as boththe tasks are not optimized in an end-to-end (E2E) fashion. Recent studies confirm that integrated approaches (e.g., E2E ASR)outperform sequential ones (e.g., phoneme based ASR). 
   
-## Problem statement:
+### Problem statement:
 In this work, we present an E2E NER approach from Enlgish speech, which jointly optimizes the ASR and NER tagger components. Experimental results show that the proposed E2E approach outperforms  the  classical  two-step  approach. 
 
 ## Overview:
 * NER is an important task in information extraction systems and very useful in many applications. It has many [progress](https://nlp.cs.nyu.edu/sekine/papers/li07.pdf) and applications such as in optimizing search engine algorithms~, classifying content for news providers, and recommending content. However, NER from speech has many applications such as the privacy concerns in medical recordings (to mute or hide specific words such as patient names), but not a lot of work has been done in this regard.
 
-## Dataset: 
+### Dataset: 
 
 ### What we deliver in this repo:
 * **Source code files**: For bth the ASR and NER tagger component as standlaone and for the E2E NER.
