@@ -8,8 +8,8 @@ In this work, we present an E2E NER approach from Enlgish speech, which jointly 
 ## Overview:
 Named entity recognition (NER) from text has been a widely studied problem. Until now, NER from speech is mostly studied in a two-step pipeline process. NER is an important task in information extraction systems and very useful in many applications. Recent studies confirm that integrated approaches (e.g., E2E ASR)outperform sequential ones (e.g., phoneme based ASR). It has many [progress](https://nlp.cs.nyu.edu/sekine/papers/li07.pdf) and applications such as in optimizing search engine algorithms~, classifying content for news providers, and recommending content. However, NER from speech has many applications such as the privacy concerns in medical recordings (to mute or hide specific words such as patient names), but not a lot of work has been done in this regard. In this work we explore E2E and two-step approach for English speech and comapre the results.
 
-### Dataset: 
-We will release it soon.
+### Dataset: <sub>We will release it soon<sub/>.
+ * Total number of classes are 3: Person, Location, and Organization. 
 
 ### What we deliver in this repo:
 * **Source code files**: For bth the ASR and NER tagger component as standlaone and for the E2E NER.
@@ -26,9 +26,6 @@ parameters/hyper-parameters and anchor box tuning.
 * The dataset for this task is prepared with special symbols at the end and at the start.
 * Apart from the default data augmentation (Tempo and gain), We did not use any augmented data for training. <br/>
 
-**Base neural net used:** A standard [DS2]("https://arxiv.org/pdf/1512.02595.pdf") architecture is used in this implementation. <br/>
-* Default parameters used are as mentioned in the paper.
-* Total number of classes are 3: Person, Location, and Organization. 
-
+**Base neural net used:** A standard [DS2]("https://arxiv.org/pdf/1512.02595.pdf") architecture is used in this implementation with default parameters.
 
 For any queries [contact](raotnameh@gmail.com).
