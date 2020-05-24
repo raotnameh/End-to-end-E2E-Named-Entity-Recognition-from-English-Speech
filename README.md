@@ -2,15 +2,11 @@
 *Tested on Ubuntu 18.04.* <br/>
 *<sub>The [E2E NER from speech]() implementation used in this project is heavily based on the **[SeanNaren's](https://github.com/SeanNaren/deepspeech.pytorch)** Deepspeech2 (DS2) pytorch implementation and [FlairNLP](https://github.com/flairNLP/flair). I strongly recommend to look at these 2 repos.</sub>*
 
-
-#### Overview: 
-Named entity recognition (NER) from text has been a widely studied problem and usually extracts semantic information from text. Until now, NER from speech is mostly studied in a two-step pipeline process that includes first applying an automaticspeech recognition (ASR) system on an audio sample and then passing the predicted transcript to a NER tagger. In such cases,the error does not propagate from one step to another as boththe tasks are not optimized in an end-to-end (E2E) fashion. Recent studies confirm that integrated approaches (e.g., E2E ASR)outperform sequential ones (e.g., phoneme based ASR). 
-  
 ### Problem statement:
 In this work, we present an E2E NER approach from Enlgish speech, which jointly optimizes the ASR and NER tagger components. Experimental results show that the proposed E2E approach outperforms  the  classical  two-step  approach. 
 
 ## Overview:
-* NER is an important task in information extraction systems and very useful in many applications. It has many [progress](https://nlp.cs.nyu.edu/sekine/papers/li07.pdf) and applications such as in optimizing search engine algorithms~, classifying content for news providers, and recommending content. However, NER from speech has many applications such as the privacy concerns in medical recordings (to mute or hide specific words such as patient names), but not a lot of work has been done in this regard.
+Named entity recognition (NER) from text has been a widely studied problem. Until now, NER from speech is mostly studied in a two-step pipeline process. NER is an important task in information extraction systems and very useful in many applications. Recent studies confirm that integrated approaches (e.g., E2E ASR)outperform sequential ones (e.g., phoneme based ASR). It has many [progress](https://nlp.cs.nyu.edu/sekine/papers/li07.pdf) and applications such as in optimizing search engine algorithms~, classifying content for news providers, and recommending content. However, NER from speech has many applications such as the privacy concerns in medical recordings (to mute or hide specific words such as patient names), but not a lot of work has been done in this regard. In this work we explore E2E and two-step approach for English speech and comapre the results.
 
 ### Dataset: 
 We will release it soon.
