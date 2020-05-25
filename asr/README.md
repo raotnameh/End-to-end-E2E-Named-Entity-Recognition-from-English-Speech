@@ -52,32 +52,33 @@ cat file_1.csv file_2.cav > combined.csv
 ```
 
 ### Training a Model
-
+For training an E2E NER use star_labels.json, and for training a standard ASR use true_labels.json
 ```
-python train.py --train-manifest data/train_manifest.csv --val-manifest data/val_manifest.csv
+python train.py --train-manifest data/ner/train.csv --val-manifest data/ner/dev.csv --cuda --rnn-type gru --hidden-layers 5 --momentum 0.95 --weights models/without_space.pth --opt-level O0 --loss-scale 1.0 --hidden-size 1024 --epochs 50 --lr 0.0051 --gpu-rank 4 --batch-size 32 --labels star_labels.json
 ```
 
 Use `python train.py -h` for more parameters and options.
 
 Different Optimization levels are available. More information on the Nvidia Apex API can be seen [here](https://nvidia.github.io/apex/amp.html#opt-levels).
 
-```
-python train.py --train-manifest data/train_manifest.csv --val-manifest data/val_manifest.csv --opt-level O1 --loss-scale 1.0
-```
 ## Testing/Inference
 
 To evaluate a trained model on a test set (has to be in the same format as the training set):
 
 ```
-python test.py --model-path models/deepspeech.pth --test-manifest /path/to/test_manifest.csv --cuda
+python test.py --test-manifest data/ner/dev.csv --cuda --model-path models/without_space.pth --gpu-rank 5 --batch-size 64 -decoder beam --beam-width 800 --alpha .96 --beta 4 --lm-path lm/4_gram.arpa
 ```
 
 An example script to output a transcription has been provided:
 
 ```
-python transcribe.py --model-path models/deepspeech.pth --audio-path /path/to/audio.wav
+python transcribe.py --audio-path path/to/audio.wav --cuda --model-path models/without_space.pth --decoder beam --beam-width 800 --alpha .96 --beta 4 --lm-path lm/4_gram.arpa 
 ```
 
+To save the predicted transcripts (--path is to folder containg all the audio files).
+```
+python save.py --cuda --path /home/hemant/dummy/2/ --decoder beam --beam-width 1024 --alpha 1.96 --beta 6 --beam-width 800 --model-path models/without_space.pth --lm-workers 12 --gpu 4 --output_path data/libri_pred_txt/ --lm-path lm/4_gram.arpa
+```
 ## Using an ARPA LM
 
 We support using kenlm based LMs. Below are instructions on how to take the LibriSpeech LMs found [here](http://www.openslr.org/11/) and tune the model to give you the best parameters when decoding, based on LibriSpeech.
@@ -89,11 +90,8 @@ To build your own LM you need to use the KenLM repo found [here](https://github.
 ### Alternate Decoders
 By default, `test.py` and `transcribe.py` use a `GreedyDecoder` which picks the highest-likelihood output label at each timestep. Repeated and blank symbols are then filtered to give the final output.
 
-A beam search decoder can optionally be used with the installation of the `ctcdecode` library as described in the Installation section. The `test` and `transcribe` scripts have a `--decoder` argument. To use the beam decoder, add `--decoder beam`. The beam decoder enables additional decoding parameters:
-- **beam_width** how many beams to consider at each timestep
-- **lm_path** optional binary KenLM language model to use for decoding
-- **alpha** weight for language model
-- **beta** bonus weight for words
+A beam search decoder can optionally be used with the installation of the `ctcdecode` library as described in the Installation section. The `test` and `transcribe` scripts have a `--decoder` argument. To use the beam decoder, add `--decoder beam`. 
+
 ## Pre-trained models
 Soon
 
