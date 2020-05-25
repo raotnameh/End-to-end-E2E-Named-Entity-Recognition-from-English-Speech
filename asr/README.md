@@ -3,7 +3,7 @@
 ### Building it from Source
 
 Several libraries are needed to be installed for training to work. I will assume that everything is being installed in
-an Anaconda installation on Ubuntu, with Pytorch 1.0.
+an Anaconda installation on Ubuntu.
 
 Install [PyTorch](https://github.com/pytorch/pytorch#installation) if you haven't already.
 
