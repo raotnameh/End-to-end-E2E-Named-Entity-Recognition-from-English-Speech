@@ -12,8 +12,9 @@ Named entity recognition (NER) from text has been a widely studied problem. Unti
 * **README.md**: Detailed Description of dataset preparation, augmentation(if any), detection network used, training
 parameters/hyper-parameters and anchor box tuning.
 
-### Dataset: <sub>We will release it soon<sub/>.
- * Total number of classes are 3: Person, Location, and Organization. 
+### Dataset: 
+* <sub>We will release it soon<sub/>.
+* Total number of classes are 3: Person, Location, and Organization. 
 
 ### Dataset preparation steps:
 * The dataset for this task is prepared with special symbols at the end and at the start.
