@@ -1,4 +1,4 @@
-<sub> **Implentation of the [E2E NER](https://arxiv.org/abs/2005.11184).**</sub> <br/>
+<sub> **Implentation of the [E2E NER paper](https://arxiv.org/abs/2005.11184).**</sub> <br/>
 <sub>**Work in progress.<br />**</sub> <br/>
 
 ### Problem statement:
