@@ -35,6 +35,7 @@ pip install -r requirements.txt
 ## Training
 
 ### Datasets
+Csv for train, dev, and test splits are in data/ner/
 #### Custom Dataset
 To create a custom dataset you must create a CSV file containing the locations of the training data. This has to be in the format of:
 ```
