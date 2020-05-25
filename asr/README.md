@@ -35,7 +35,8 @@ pip install -r requirements.txt
 ## Training
 
 ### Datasets
-Csv for train, dev, and test splits are in data/ner/
+
+The true transcripts (.txt files) for training **&** testing an E2E NER should have the special symbols to denote the start and end of a named entity.
 #### Custom Dataset
 To create a custom dataset you must create a CSV file containing the locations of the training data. This has to be in the format of:
 ```
@@ -45,6 +46,7 @@ To create a custom dataset you must create a CSV file containing the locations o
 ```
 The first path is to the audio file, and the second path is to a text file containing the transcript on one line. This can then be used as stated below.
 
+**train.csv, test.csv and dev.csv used in the paper are provided in data/ner/**
 #### Merging multiple manifest files
 
 To create bigger manifest files (to train/test on multiple datasets at once) we can merge manifest files together like below using different csvs.
