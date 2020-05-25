@@ -27,4 +27,4 @@ parameters/hyper-parameters and anchor box tuning.
 | Two-step |Micro average | 0.83      |0.77    |0.80    |
 | E2E NER  |Micro average | **0.96**  |**0.85**|**0.90**|
 
-For any queries [contact](raotnameh@gmail.com).
+For any queries [Hemant](raotnameh@gmail.com), [Sreyan](gsreyan@gmail.com).
