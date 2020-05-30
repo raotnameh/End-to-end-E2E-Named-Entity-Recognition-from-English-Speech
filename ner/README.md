@@ -31,6 +31,14 @@ python flair_test_and_dev_evaluation.py --input input folder path --model model 
 ```
 Note: Data should have only two columns, namely, text and ner.
 
+Link to pre-trained flair models:
+
+https://drive.google.com/file/d/1-ABVzo2O46q9dFlhZN5nqt1gkUOQYI98/view?usp=sharing
+
+Note: The folder has two models used for our experiments.
+ 
+flair_trained_on_lowercase_conll.pt - Model trained on lowercase CoNLL-2003 data without MISC tag.
+flair_trained_on_lowercase_conll.pt - Model trained on lowercase CoNLL-2003 data combined with our manually annotated data, without MISC tag.
 
 ## Converting files after predicting named entities through Flair
 
