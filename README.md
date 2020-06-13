@@ -28,7 +28,8 @@ parameters/hyper-parameters and anchor box tuning.
 | E2E NER  |Micro average | **0.96**  |**0.85**|**0.90**|
 
 ### Citation
-[Paper] (https://arxiv.org/abs/2005.11184) is submitted to interspeech2020
+[Paper](https://arxiv.org/abs/2005.11184) is submitted to interspeech2020.
+
 @article{yadav2020end,
   title={End-to-end Named Entity Recognition from English Speech},
   author={Yadav, Hemant and Ghosh, Sreyan and Yu, Yi and Shah, Rajiv Ratn},
