@@ -12,7 +12,7 @@ Named entity recognition (NER) from text has been a widely studied problem. Unti
 parameters/hyper-parameters and anchor box tuning.
 
 ### Dataset: 
-* <sub>We will release it soon<sub/>.
+* <sub>We will release it soon.<sub/>.
 * Total number of classes are 3: Person, Location, and Organization. 
 
 ### Dataset preparation steps:
