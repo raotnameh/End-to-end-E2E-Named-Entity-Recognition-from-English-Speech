@@ -30,12 +30,12 @@ parameters/hyper-parameters and anchor box tuning.
 ### Citation
 [Paper](https://arxiv.org/abs/2005.11184) is submitted to interspeech2020.
 
-@article{yadav2020end,
-  title={End-to-end Named Entity Recognition from English Speech},
-  author={Yadav, Hemant and Ghosh, Sreyan and Yu, Yi and Shah, Rajiv Ratn},
-  journal={arXiv preprint arXiv:2005.11184},
-  year={2020}
-}
+@article{yadav2020end,<br/>
+  title={End-to-end Named Entity Recognition from English Speech},<br/>
+  author={Yadav, Hemant and Ghosh, Sreyan and Yu, Yi and Shah, Rajiv Ratn},<br/>
+  journal={arXiv preprint arXiv:2005.11184},<br/>
+  year={2020}<br/>
+}<br/>
 
 ## Release Notes
 May 2020
