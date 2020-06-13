@@ -1,4 +1,4 @@
-*<sub>This section describes various python scripts needed for training flair and formatting your data for use with the model</sub>*
+*<sub>This section describes various python scripts needed for training flair and formatting your data for use with the model for the 2Step NER.</sub>*
 
 ## Flair model training, testing and evaluation
 
