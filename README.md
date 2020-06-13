@@ -1,5 +1,4 @@
 <sub> **Implentation of the [E2E NER paper](https://arxiv.org/abs/2005.11184).**</sub> <br/>
-<sub>**Work in progress.<br />**</sub> <br/>
 
 ### Problem statement:
 In this work, we present an E2E NER approach from Enlgish speech, which jointly optimizes the ASR and NER tagger components. Experimental results show that the proposed E2E approach outperforms  the  classical  two-step  approach. 
@@ -27,6 +26,15 @@ parameters/hyper-parameters and anchor box tuning.
 | -------- | ------------ | --------- | ------ | ------ |
 | Two-step |Micro average | 0.83      |0.77    |0.80    |
 | E2E NER  |Micro average | **0.96**  |**0.85**|**0.90**|
+
+### Citation
+[Paper] (https://arxiv.org/abs/2005.11184) is submitted to interspeech2020
+@article{yadav2020end,
+  title={End-to-end Named Entity Recognition from English Speech},
+  author={Yadav, Hemant and Ghosh, Sreyan and Yu, Yi and Shah, Rajiv Ratn},
+  journal={arXiv preprint arXiv:2005.11184},
+  year={2020}
+}
 
 ## Release Notes
 May 2020
