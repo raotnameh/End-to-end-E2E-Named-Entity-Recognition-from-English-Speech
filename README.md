@@ -37,6 +37,9 @@ parameters/hyper-parameters and anchor box tuning.
   year={2020}<br/>
 }<br/>
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3893954.svg)](https://doi.org/10.5281/zenodo.3893954)
+
+
 ## Release Notes
 May 2020
 * Initital release
