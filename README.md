@@ -39,7 +39,7 @@ parameters/hyper-parameters and anchor box tuning.
 }<br/>
 
 ## Release Notes
-May 2020
+Jun 2020
 * Initital release
 
 For any queries [Hemant](raotnameh@gmail.com), [Sreyan](gsreyan@gmail.com).
