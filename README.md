@@ -1,5 +1,7 @@
-<sub> **Implentation of the [E2E NER paper](https://arxiv.org/abs/2005.11184).**</sub> <br/>
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3893954.svg)](https://doi.org/10.5281/zenodo.3893954)
+
+<sub> **Implentation of the [E2E NER paper](https://arxiv.org/abs/2005.11184).**</sub> <br/>
+
 
 ### Problem statement:
 In this work, we present an E2E NER approach from Enlgish speech, which jointly optimizes the ASR and NER tagger components. Experimental results show that the proposed E2E approach outperforms  the  classical  two-step  approach. 
