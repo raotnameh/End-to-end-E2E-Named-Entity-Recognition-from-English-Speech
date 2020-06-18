@@ -96,7 +96,7 @@ By default, `test.py` and `transcribe.py` use a `GreedyDecoder` which picks the 
 A beam search decoder can optionally be used with the installation of the `ctcdecode` library as described in the Installation section. The `test` and `transcribe` scripts have a `--decoder` argument. To use the beam decoder, add `--decoder beam`. 
 
 ## Pre-trained models
-Download hte zip file: [without_space.pth.zip](https://doi.org/10.5281/zenodo.3893954).
+Download the zip file: [without_space.pth.zip](https://doi.org/10.5281/zenodo.3893954).
 
 
 ## Experimental results: <br/>
