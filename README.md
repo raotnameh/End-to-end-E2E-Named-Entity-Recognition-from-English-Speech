@@ -12,7 +12,7 @@ Named entity recognition (NER) from text has been a widely studied problem. Unti
 parameters/hyper-parameters and anchor box tuning.
 
 ### Dataset: 
-* <sub>We will release it soon.<sub/>.
+* [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3893954.svg)](https://doi.org/10.5281/zenodo.3893954)
 * Total number of classes are 3: Person, Location, and Organization. 
 
 ### Dataset preparation steps:
@@ -36,9 +36,6 @@ parameters/hyper-parameters and anchor box tuning.
   journal={arXiv preprint arXiv:2005.11184},<br/>
   year={2020}<br/>
 }<br/>
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3893954.svg)](https://doi.org/10.5281/zenodo.3893954)
-
 
 ## Release Notes
 May 2020
