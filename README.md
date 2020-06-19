@@ -15,7 +15,7 @@ Named entity recognition (NER) from text has been a widely studied problem. Unti
 parameters/hyper-parameters and anchor box tuning.
 
 ### Dataset: 
-* Download the mp3.tar.gz and txt.tar.gz files from [here](https://doi.org/10.5281/zenodo.3893954). The dataset is for research purposes only.
+* Download the mp3.tar.gz and txt.tar.gz files from [here](https://doi.org/10.5281/zenodo.3893954). The dataset is for **research** purposes only.
   * Extract these files using: tar -xv --use-compress-program=pigz -f file_name. 
   * After extracting the files convert the .mp3 files to .wav files before training and testing. 
   * Once downloaded update the .csv files at E2E_NER/data/ner/.
