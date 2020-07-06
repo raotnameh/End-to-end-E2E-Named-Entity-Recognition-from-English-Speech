@@ -69,18 +69,18 @@ Different Optimization levels are available. More information on the Nvidia Apex
 To evaluate a trained model on a test set (has to be in the same format as the training set):
 
 ```
-python test.py --test-manifest data/ner/dev.csv --cuda --model-path models/without_space.pth --gpu-rank 5 --batch-size 64 -decoder beam --beam-width 800 --alpha .96 --beta 4 --lm-path lm/4_gram.arpa
+python test.py --test-manifest data/ner/dev.csv --cuda --model-path models/without_space.pth --gpu-rank 5 --batch-size 64 -decoder beam --beam-width 800 --alpha .96 --beta 4 --lm-path lm/lm.binary
 ```
 
 An example script to output a transcription has been provided:
 
 ```
-python transcribe.py --audio-path path/to/audio.wav --cuda --model-path models/without_space.pth --decoder beam --beam-width 800 --alpha .96 --beta 4 --lm-path lm/4_gram.arpa 
+python transcribe.py --audio-path path/to/audio.wav --cuda --model-path models/without_space.pth --decoder beam --beam-width 800 --alpha .96 --beta 4 --lm-path lm/lm.binary
 ```
 
 To save the predicted transcripts (--path is to folder containg all the audio files).
 ```
-python save.py --cuda --path /home/hemant/dummy/2/ --decoder beam --beam-width 1024 --alpha 1.96 --beta 6 --beam-width 800 --model-path models/without_space.pth --lm-workers 12 --gpu 4 --output_path data/libri_pred_txt/ --lm-path lm/4_gram.arpa
+python save.py --cuda --path /home/hemant/dummy/2/ --decoder beam --beam-width 1024 --alpha 1.96 --beta 6 --beam-width 800 --model-path models/without_space.pth --lm-workers 12 --gpu 4 --output_path data/libri_pred_txt/ --lm-path lm/lm.binary
 ```
 ## Using an ARPA LM
 
