@@ -84,7 +84,7 @@ python save.py --cuda --path /home/hemant/dummy/2/ --decoder beam --beam-width 1
 ```
 ## Using an ARPA LM
 
-We support using kenlm based LMs. Below are instructions on how to take the LibriSpeech LMs found [here](http://www.openslr.org/11/) and tune the model to give you the best parameters when decoding, based on LibriSpeech.
+We support using kenlm based LMs.
 
 ### Building your own LM
 
