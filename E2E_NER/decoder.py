@@ -26,16 +26,15 @@ class Decoder(object):
     helper functions. Subclasses should implement the decode() method.
 
     Arguments:
-        labels (string): mapping from integers to characters.
+        labels (list): mapping from integers to characters.
         blank_index (int, optional): index for the blank '_' character. Defaults to 0.
         space_index (int, optional): index for the space ' ' character. Defaults to 28.
     """
 
     def __init__(self, labels, blank_index=0):
-        # e.g. labels = "_'ABCDEFGHIJKLMNOPQRSTUVWXYZ#"
         self.labels = labels
         self.int_to_char = dict([(i, c) for (i, c) in enumerate(labels)])
-        self.blank_index = blank_index
+        self.blank_index = labels.index("_")
         space_index = len(labels)  # To prevent errors in decode, we add an out of bounds index for the space
         if ' ' in labels:
             space_index = labels.index(' ')
@@ -88,13 +87,14 @@ class Decoder(object):
 
 
 class BeamCTCDecoder(Decoder):
-    def __init__(self, labels, lm_path=None, alpha=0, beta=0, cutoff_top_n=40, cutoff_prob=1.0, beam_width=10,
-                 num_processes=12, blank_index=0):
+    def __init__(self, labels, lm_path=None, alpha=0, beta=0, cutoff_top_n=40, cutoff_prob=1.0, beam_width=100,
+                 num_processes=4, blank_index=0):
         super(BeamCTCDecoder, self).__init__(labels)
         try:
             from ctcdecode import CTCBeamDecoder
         except ImportError:
             raise ImportError("BeamCTCDecoder requires paddledecoder package.")
+        labels = list(labels)  # Ensure labels are a list before passing to decoder
         self._decoder = CTCBeamDecoder(labels, lm_path, alpha, beta, cutoff_top_n, cutoff_prob, beam_width,
                                        num_processes, blank_index)
 
