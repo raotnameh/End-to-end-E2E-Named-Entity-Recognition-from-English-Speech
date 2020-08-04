@@ -110,9 +110,9 @@ for file in files:
         if "]" in row["Words"]:
             row["Words"]=(re.sub(r'\]','', row["Words"]))
         if "(" in row['Words']:
-            row["Words"]=(re.sub(r'/(','', row["Words"]))
+            row["Words"]=row["Words"][1:]
         if "{" in row['Words']:
-            row["Words"]=(re.sub(r'/{','', row["Words"]))
+            row["Words"]=row["Words"][1:]
         if "|" in row['Words']:
             row["Words"]=(re.sub(r'[|]','', row["Words"]))
         if "$" in row['Words']:
