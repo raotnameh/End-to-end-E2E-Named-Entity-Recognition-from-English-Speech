@@ -11,7 +11,7 @@ args = parser.parse_args()
 
 true_path =  args.true_path + '/*.txt'
 pred_path = args.pred_path + '/*.txt'
-
+print(len(true_path))
 stop = [']']
 
 def rea(file):
@@ -73,9 +73,9 @@ def score(tp, fp, fn):
     if tp == 0:
         pre, rec, f1 = 0, 0, 0
     else:
-        pre = np.round(tp/(tp+fp),decimals=3)
-        rec = np.round(tp/(tp+fn),decimals=3)
-        f1 = np.round(2*((pre*rec)/(pre+rec)),decimals=3)
+        pre = np.round(tp/(tp+fp),decimals=2)
+        rec = np.round(tp/(tp+fn),decimals=2)
+        f1 = np.round(2*((pre*rec)/(pre+rec)),decimals=2)
     return pre, rec, f1
 
 
@@ -111,7 +111,7 @@ for j in tqdm(["|", "{", "$"]):
 
 #macro
 print("Macro score")
-score_ = np.round((prf[0][0] + prf[1][0] + prf[0][0] ) /3,3),np.round((prf[0][1] + prf[1][1] + prf[2][1] ) /3,3), np.round((prf[0][2] + prf[1][2] + prf[2][2] ) /3,3) 
+score_ = np.round((prf[0][0] + prf[1][0] + prf[0][0] ) /3,2),np.round((prf[0][1] + prf[1][1] + prf[2][1] ) /3,2), np.round((prf[0][2] + prf[1][2] + prf[2][2] ) /3,2) 
 print(f"Prec, recall and f1 score are: {score_[0]}, {score_[1]},and {score_[2]}")
 
 #micro

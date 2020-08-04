@@ -4,27 +4,28 @@ import sys
 from multiprocessing.pool import Pool
 
 import numpy as np
-import torch
 from tqdm import tqdm
 
+import torch
 from decoder import BeamCTCDecoder
 from model import DeepSpeech
 from opts import add_decoder_args
+from utils import load_model
 
 parser = argparse.ArgumentParser(description='Tune an ARPA LM based on a pre-trained acoustic model output')
 parser.add_argument('--model-path', default='models/deepspeech_final.pth',
                     help='Path to model file created by training')
-parser.add_argument('--saved-output', default="", type=str, help='Path to output from test.py')
-parser.add_argument('--num-workers', default=16, type=int, help='Number of parallel decodes to run')
-parser.add_argument('--output-path', default="tune_results.json", help="Where to save tuning results")
+parser.add_argument('--saved-output', default="test.pth", type=str, help='Path to output from test.py')
+parser.add_argument('--num-workers', default=48, type=int, help='Number of parallel decodes to run')
+parser.add_argument('--output-path', default="", help="Where to save tuning results")
 parser.add_argument('--lm-alpha-from', default=0.0, type=float, help='Language model weight start tuning')
 parser.add_argument('--lm-alpha-to', default=3.0, type=float, help='Language model weight end tuning')
 parser.add_argument('--lm-beta-from', default=0.0, type=float,
                     help='Language model word bonus (all words) start tuning')
 parser.add_argument('--lm-beta-to', default=0.5, type=float,
                     help='Language model word bonus (all words) end tuning')
-parser.add_argument('--lm-num-alphas', default=45, type=float, help='Number of alpha candidates for tuning')
-parser.add_argument('--lm-num-betas', default=8, type=float, help='Number of beta candidates for tuning')
+parser.add_argument('--lm-num-alphas', default=20, type=float, help='Number of alpha candidates for tuning')
+parser.add_argument('--lm-num-betas', default=10, type=float, help='Number of beta candidates for tuning')
 parser = add_decoder_args(parser)
 args = parser.parse_args()
 
@@ -32,9 +33,11 @@ if args.lm_path is None:
     print("error: LM must be provided for tuning")
     sys.exit(1)
 
-model = DeepSpeech.load_model(args.model_path)
+model = load_model(model_path=args.model_path,
+                   device='cpu',
+                   use_half=False)
 
-saved_output = np.load(args.saved_output)
+saved_output = torch.load(args.saved_output)
 
 
 def init(beam_width, blank_index, lm_path):
@@ -50,8 +53,6 @@ def decode_dataset(params):
 
     total_cer, total_wer, num_tokens, num_chars = 0, 0, 0, 0
     for out, sizes, target_strings in saved_output:
-        out = torch.Tensor(out).float()
-        sizes = torch.Tensor(sizes).int()
         decoded_output, _, = decoder.decode(out, sizes)
         for x in range(len(target_strings)):
             transcript, reference = decoded_output[x][0], target_strings[x][0]
@@ -60,7 +61,7 @@ def decode_dataset(params):
             total_cer += cer_inst
             total_wer += wer_inst
             num_tokens += len(reference.split())
-            num_chars += len(reference)
+            num_chars += len(reference.replace(' ', ''))
 
     wer = float(total_wer) / num_tokens
     cer = float(total_cer) / num_chars
