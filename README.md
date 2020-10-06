@@ -42,7 +42,7 @@ parameters/hyper-parameters and anchor box tuning.
   year={2020}<br/>
 }<br/>
 
-[Paper](https://arxiv.org/abs/2005.11184) is submitted to interspeech2020.
+[Paper](https://arxiv.org/abs/2005.11184) is accepted at interspeech2020.
 
 ## Release Notes
 Jun 2020
