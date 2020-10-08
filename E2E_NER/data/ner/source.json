@@ -1,0 +1,14 @@
+{
+  "libri": [
+    "http://www.openslr.org/resources/12/train-clean-100.tar.gz",
+    "http://www.openslr.org/resources/12/train-clean-360.tar.gz",
+    "http://www.openslr.org/resources/12/train-other-500.tar.gz",
+    "http://www.openslr.org/resources/12/dev-clean.tar.gz",
+    "http://www.openslr.org/resources/12/dev-other.tar.gz",
+    "http://www.openslr.org/resources/12/test-clean.tar.gz",
+    "http://www.openslr.org/resources/12/test-other.tar.gz"
+  ],
+  "vox": "http://www.repository.voxforge1.org/downloads/SpeechCorpus/Trunk/Audio/Main/16kHz_16bit/",
+  "ted": "http://www.openslr.org/resources/19/TEDLIUM_release2.tar.gz",
+  "cv": "https://common-voice-data-download.s3.amazonaws.com/cv_corpus_v1.tar.gz"
+}
