@@ -20,7 +20,7 @@ parameters/hyper-parameters and anchor box tuning.
   * After extracting the files convert the .mp3 files to .wav files before training and testing. 
   * Once downloaded update the .csv files at E2E_NER/data/ner/.
 * Total number of classes are 3: Person, Location, and Organization. 
-* Added files to identify the source of an utterance from the source dataset. Files are at `E2E_NER/data/ner/source_given_filename.json` and `E2E_NER/data/ner/source.json
+* Added files to identify the source of an utterance from the source dataset. Files are at `E2E_NER/data/ner/source_given_filename.json` and `E2E_NER/data/ner/source.json`.
   * source_given_filename.json: It has the file names which are present in the individual source dataset for easy comparision.
   * source.json: It has the links to download the source datasets.
 
