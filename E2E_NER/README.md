@@ -105,6 +105,8 @@ Download the zip file: [without_space.pth.zip](https://doi.org/10.5281/zenodo.38
 | Two-step |Micro average | 0.83      |0.77    |0.80    |
 | E2E NER  |Micro average | **0.96**  |**0.85**|**0.90**|
 
+> The ctc based decoder gives bad results if a word is OOV. If testing on a data which have a very different vocab, please train the LM on a bigger NER dataset. YOu can use any NER text dataset as long as you change it to the required format for LM training using KenLM.
+
 For any queries [contact](raotnameh@gmail.com).
 
 ## Acknowledgements
